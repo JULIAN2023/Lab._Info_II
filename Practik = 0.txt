@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Bromo=109;
+    if (Bromo==0)
+    {
+        cout<<"Resultado = "<<Bromo;
+    }
+    else
+    {
+        int Calcio = 0;
+        if (Bromo<0)
+        {
+            Bromo=Bromo*(-1);
+            Calcio++;
+            cout<<" Negativo ";
+        }
+        int Plomo=Bromo;
+        int Cobre=0;
+        int Uranio=0;
+        for(int Azufre=1;Bromo>=Azufre;Azufre=Azufre*10){
+            Cobre=Plomo%10;
+            Plomo=Plomo/10;
+            Uranio=Uranio+(Cobre*Cobre);
+            cout<<" Azufre: "<<Azufre<<" Uranio: "<<Uranio<<" Cobre: "<<Cobre<<" Plomo: "<<Plomo;
+        }
+        if (Calcio>0)
+        {
+            Uranio*=(-1);
+        }
+        cout<<" Resultado = "<<Uranio;
+    }
+    return 0;
+}
